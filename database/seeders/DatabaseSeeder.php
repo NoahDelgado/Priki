@@ -14,9 +14,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
         $this->call([
-            DomainSeeder::class
+            // TruncateAllTables::class,
+            DomainSeeder::class,
+            PublicationStateSeeder::class,
+            PublicationStateTransitionSeeder::class,
+            RoleSeeder::class,
+            UserSeeder::class,
+            PracticeSeeder::class,
+            OpinionSeeder::class,
+            ReferenceSeeder::class,
+            OpinionReferenceSeeder::class
         ]);
     }
 }
