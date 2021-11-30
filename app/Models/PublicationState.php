@@ -9,4 +9,8 @@ class PublicationState extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    public function practice()
+    {
+        return $this->hasMany(Practice::class);
+    }
 }

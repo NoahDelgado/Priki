@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index')->with('nbDays', 5);
 });
+Route::get('/role', function () {
+    return view('role');
+});
+//Route::get('/index/{nbDays}', function ($nbDays) {
+//    return view('index')->with($nbDays);
+//});
+Route::get('/index/{nbDays}', [IndexController::class, 'index']);
+Route::get('/practice/{practice}', [PracticeController::class, 'index']);
