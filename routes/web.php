@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index')->with('nbDays', 5);
+    return redirect('/index/' . config('app.default_time_span'));
 });
 Route::get('/role', function () {
     return view('role');

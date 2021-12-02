@@ -11,8 +11,8 @@ class IndexController extends Controller
 {
     public function index($nbDays)
     {
-        Carbon::setlocale('fr');
-        dd(Practice::getRecentUpdated($nbDays));
+        setlocale(LC_TIME, 'French');
+        $practices = Practice::getRecentPublisedUpdated($nbDays);
         return view("index")->with(['nbDays' => $nbDays, 'practices' => $practices]);
     }
 }
