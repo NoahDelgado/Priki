@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Models\Practice;
 use Illuminate\Http\Request;
 use App\Models\PublicationState;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
