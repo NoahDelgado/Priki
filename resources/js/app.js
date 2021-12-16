@@ -1,3 +1,4 @@
+import 'bootstrap';
 require('./bootstrap');
 
 import Alpine from 'alpinejs';
